@@ -1,0 +1,5 @@
+.DS_Store
+**/.hyperframes/artifacts/
+**/.hyperframes/cache/
+renders/
+*.tmp.png
