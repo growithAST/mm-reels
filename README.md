@@ -12,3 +12,8 @@ The skill lives in `.claude/skills/meanwhile-mayank-style-reels/` (start with it
 Phone / computer steps in Hinglish: `steps.md`.
 
 By Grow With AST.
+
+---
+**Note:** this skill recreates a *style* of reel inspired by Meanwhile Mayank's science reels. It is not affiliated
+with or endorsed by Meanwhile Mayank, and it contains no content from his videos: all images are our own,
+all sounds are made in code, and you bring your own topic, voice and music.

@@ -3,3 +3,6 @@
 **/.hyperframes/cache/
 renders/
 *.tmp.png
+**/.hyperframes/history-id
+**/.hyperframes/video-state.json
+**/.hyperframes/video-state-lock
