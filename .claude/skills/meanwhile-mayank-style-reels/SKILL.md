@@ -32,8 +32,17 @@ and exactly what you need from them, and never leave them guessing which file or
      yes, run `scripts/check_setup.sh --install` (in the background if it is slow), then run the check again.
    - **Homebrew missing** (macOS): it needs the user's Mac password, so you cannot install it. Give them the one
      command the script prints, ask them to paste it into Terminal and tell you when it's done, then re-run the check.
-   - Not macOS: tell them the skill is tested on macOS; on Linux, give the apt equivalents (ffmpeg, nodejs 22,
-     python3-venv) and re-run the check. Windows: say it's not supported yet.
+   - **Linux / Windows (WSL2):** `check_setup.sh` has an apt branch (ffmpeg, Node 22 via NodeSource, python3-venv,
+     whisper.cpp built from source). It needs zsh (`sudo apt install -y zsh`) and a sudo password the user types
+     themselves. **Native Windows (PowerShell) cannot run the scripts:** tell them to open **Ubuntu in WSL2**
+     (`wsl --install -d Ubuntu` in an admin PowerShell, once, then restart) and run the skill from there; their
+     Windows files are under `/mnt/c/Users/<name>/`. Say plainly that Linux/WSL is less tested than macOS.
+   - **Phone only (Gemini app, Claude app without a computer):** the render cannot run on a phone. Offer what a
+     phone can do (script, beat sheet, image prompts: see `gemini-mobile/GEM_INSTRUCTIONS.md` in the repo) and
+     tell them the render needs a computer or a cloud Linux session.
+   - **Other agents (Gemini CLI, Antigravity, Codex):** this same SKILL.md works; `AGENTS.md` / `GEMINI.md` at the
+     repo root point to it. Where a step says "ask the user", ask in chat; where it says "background", use that
+     agent's own way of running a long command.
    - Before running any script later in the session: `source ~/.mm-reels/env.sh`, and run Python scripts with
      `"$MMPY" scripts/<name>.py` (that Python has Pillow + numpy).
 2. **Ask all the start questions in ONE message:** copy the message in `references/start_questions.md`. Wait

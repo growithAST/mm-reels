@@ -14,5 +14,6 @@ cp "$HERE/templates/IMAGES_NEEDED_TEMPLATE.md" "$T/IMAGES_NEEDED.md"
 cp "$HERE/templates/SCRIPT_TEMPLATE.md" "$T/SCRIPT.md"
 cp "$HERE/templates/PROGRESS_TEMPLATE.md" "$T/PROGRESS.md"
 mkdir -p "$T/transcript"
-sed -i '' -e "s/data-duration=\"10\" data-width/data-duration=\"$D\" data-width/" -e "s/^const END = 10;/const END = $D;/" "$T/index.html"
+# portable in-place edit (BSD sed on macOS and GNU sed on Linux/WSL differ on -i)
+sed -e "s/data-duration=\"10\" data-width/data-duration=\"$D\" data-width/" -e "s/^const END = 10;/const END = $D;/" "$T/index.html" > "$T/index.html.tmp" && mv "$T/index.html.tmp" "$T/index.html"
 echo "new reel at $T ($D s). Next: voice-over -> scripts/transcribe.sh -> BEAT_SHEET.md -> IMAGES_NEEDED.md"

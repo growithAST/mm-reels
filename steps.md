@@ -6,12 +6,16 @@ Jinke paas computer hai wo Tarika 1, **jinke paas sirf phone hai wo Tarika 2** f
 
 | | Tarika 1: Computer wale | Tarika 2: Sirf Phone wale (computer nahi hai) |
 |---|---|---|
-| Kya chahiye | Mac (best) ya Linux computer, Claude Pro/Max plan | Sirf phone (Android ya iPhone), GitHub account, Claude Pro/Max plan |
+| Kya chahiye | Mac (best), Windows (WSL2 se) ya Linux, aur Claude / Gemini / Antigravity | Sirf phone (Android ya iPhone), GitHub account, Claude Pro/Max plan |
 | Kaam kahan hota hai | Aapke computer pe | Anthropic ke cloud computer pe |
 | Video kahan milega | Computer ke folder mein (phone pe share kar lo) | GitHub repo mein, wahan se phone pe download |
 | Mushkil | Easy | Medium (pehli baar setup lamba hai) |
 
-> Windows computer abhi supported nahi hai. Windows wale Tarika 2 (sirf phone wala) use karein.
+> **Windows:** seedha PowerShell mein nahi chalta. Admin PowerShell mein `wsl --install -d Ubuntu` chalao, restart karo,
+> Ubuntu kholo aur wahan repo clone karke agent chalao (README.md "Windows: one-time WSL2 setup"). Na ho paye to Tarika 2.
+> **Gemini / Antigravity:** `./install.sh` chalao (ya Windows pe `install.ps1`), phir agent mein bolo "use the
+> meanwhile-mayank-style-reels skill, start". **Gemini phone app:** render nahi kar sakta, par `gemini-mobile/GEM_INSTRUCTIONS.md`
+> se Gem banao: script, beat sheet aur image prompts phone pe ban jayenge, render computer pe.
 
 ---
 

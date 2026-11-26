@@ -32,7 +32,7 @@ Type **`/meanwhile-mayank-style-reels start`**. Then:
    notes, "render".
 5. **`/meanwhile-mayank-style-reels continue`** picks up any reel later from its `PROGRESS.md`.
 
-Works on macOS. On Linux Claude gives install commands instead of installing; Windows isn't supported yet.
+Works on macOS (best tested) and on Linux / Windows via WSL2 Ubuntu. Native Windows PowerShell can't run it: use WSL2. A phone alone can write the script and image prompts but cannot render.
 
 ---
 
@@ -59,7 +59,7 @@ That's all. Claude then does two things:
 If something is missing, Claude tells you what and how big the download is (about 1.5 GB if nothing is there yet)
 and **asks before installing**. Say yes and it installs everything itself. The one exception is **Homebrew**, the Mac
 installer: it needs your Mac password, so Claude gives you one line to paste into the Terminal app.
-(macOS only for now.)
+(macOS, Linux and Windows-WSL2.)
 
 **2. Asks all its questions in one message.** Reply once; skip any question to keep its default:
 1. the topic, in one line;
